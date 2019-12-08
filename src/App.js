@@ -34,6 +34,7 @@ import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
 
 
 
+
 import {FilterMenu} from './filter.js';
 
 const firebaseConfig = {
@@ -167,7 +168,8 @@ const Pageone = ({pagestate,jsonstate,addressprop}) => {
       <Typography variant="h5" className={classes.summary}>
           Information on local doctors at your fingertips.
       </Typography>
-      <Autocomplete
+      {/* <Autocomplete
+          data-testid="locationSelector"
           onKeyPress = {handleKeyPress}
           className={classes.searchInput}
           onPlaceSelected={(place) => {
@@ -178,8 +180,9 @@ const Pageone = ({pagestate,jsonstate,addressprop}) => {
           }}
           types={[]}
           componentRestrictions={{country: "usa"}}
-      />
-      <Button size = "large" onClick = {switch_page} className={classes.button}>
+      /> */}
+      
+      <Button data-testid="pageTwo" size = "large" onClick = {switch_page} className={classes.button}>
         Search
       </Button>
     </Container>
